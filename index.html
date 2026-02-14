@@ -367,7 +367,6 @@ return(<div className="app-container" style={bgStyle}><FloatingHearts/>
   <div className="app-body">
     {/* Desktop Side Nav */}
     <nav className="side-nav">
-      <div className="side-nav-brand"></div>
       {navItems.map(item=><button key={item.id} className={`side-nav-item ${page===item.id||(item.id==="vault"&&page==="vault-all")?"active":""}`} onClick={()=>navClick(item.id)}>
         <span className="nav-icon">{item.icon}</span><span className="nav-label">{item.label}</span>
         {item.id==="messages"&&unreadMsgs>0&&<span className="side-nav-dot"/>}
